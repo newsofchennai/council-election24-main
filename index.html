@@ -25,6 +25,10 @@ img.symbol {
     width: 100px;
     height: 100px;
 }
+
+#heading {
+     font-size: 20px;
+}
 <!-- #zone {
     background-color: rgb(0, 74, 173);
     border-color: rgb(0, 74, 173);
@@ -35,25 +39,65 @@ img.symbol {
 .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
     padding: 5px;
 }
+
 .countdown-container {
-  text-align: center;
-  font-family: sans-serif;
+  display: flex;
+  width: 100%;
+  max-width: 70%;
+  justify-content: space-between;
 }
 
-.countdown-timer {
-  font-size: 35px;
-  margin-top: 10px;
+.days-container,
+.hours-container,
+.minutes-container, 
+.seconds-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(239 239 239);
+  border: 5px solid rgb(51 122 183);
+  width: 140px;
+  height: 140px;
+  border-radius: 15px;
 }
 
-.countdown-timer span {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  border-radius: 50%;
-  background-color: #ddd;
-  color: #333;
-  margin: 0 5px;
+.days,
+.hours,
+.minutes,
+.seconds {
+  font-size: 2.5em; 
+  margin: 10px 0;
+}
+
+
+.days-label,
+.hours-label,
+.minutes-label,
+.seconds-label {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 800px) {
+  
+  .countdown-container {
+    max-width: 90%;
+  }
+  
+  .days-container,
+  .hours-container,
+  .minutes-container, 
+  .seconds-container {
+    font-size: 0.7em;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+#heading {
+	font-size :2rem;
+	color : #337ab7;
 }
 
 @media only screen and (max-width: 480px) {
@@ -62,15 +106,30 @@ img.symbol {
   }
 }
 </style> <body><div class="my-4 px-4 py-4 text-center"><img alt=Banner src=ulbc.png style="width: 90%; height: auto; padding: 2rem;"></div> <div class=container><center>
-<div class="countdown-container">
-  <h2>Election Date - April 19th 2024 </h2>
-  <div class="countdown-timer">
-    <span id="days"></span>
-    <span id="hours"></span>
-    <span id="minutes"></span>
-    <span id="seconds"></span>
+<div id="heading"><strong>ELECTION DATE - 19<sup>th</sup> APRIL 2024 </strong></div> <br>
+<section class="countdown-container">
+  
+  <div class="days-container">
+    <div class="days"></div>
+    <div class="days-label">days</div>
   </div>
-</div>
+  
+  <div class="hours-container">
+    <div class="hours"></div>
+    <div class="hours-label">hours</div>
+  </div>
+  
+  <div class="minutes-container">
+    <div class="minutes"></div>
+    <div class="minutes-label">minutes</div>
+  </div>
+  
+  <div class="seconds-container">
+    <div class="seconds"></div>
+    <div class="seconds-label">seconds</div>
+  </div>
+  
+</section>
  <hr> <p style="font-size: 15px;align-self: center;font-family: Arial, Helvetica, sans-serif;color: crimson;"><b>Select your constituency to find out who and which party are contensting &darr; </b> <div><center><select aria-label="Default select example" class=form-select id=dropdown name=ward style="font-size: 16px;align-self: center;font-family: Arial, Helvetica, sans-serif;"><option selected value="">Choose your constituency <option value=Arakkonam>Arakkonam<option value=Arani>Arani<option value=ChennaiCentral>Chennai Central<option value=ChennaiNorth>Chennai North<option value=ChennaiSouth>Chennai South<option value=Chidambaram>Chidambaram<option value=Coimbatore>Coimbatore<option value=Cuddalore>Cuddalore<option value=Dharmapuri>Dharmapuri<option value=Dindigul>Dindigul<option value=Erode>Erode<option value=Kallakurichi>Kallakurichi<option value=Kancheepuram>Kancheepuram<option value=Kanniyakumari>Kanniyakumari<option value=Karur>Karur<option value=Krishnagiri>Krishnagiri<option value=Madurai>Madurai<option value=Mayiladuthurai>Mayiladuthurai<option value=Nagapattinam>Nagapattinam<option value=Namakkal>Namakkal<option value=Nilgiris>Nilgiris<option value=Perambalur>Perambalur<option value=Pollachi>Pollachi<option value=Puducherry>Puducherry<option value=Ramanathapuram>Ramanathapuram<option value=Salem>Salem<option value=Sivaganga>Sivaganga<option value=Sriperumbudur>Sriperumbudur<option value=Tenkasi>Tenkasi<option value=Thanjavur>Thanjavur<option value=Theni>Theni<option value=Thoothukkudi>Thoothukkudi<option value=Tiruchirappalli>Tiruchirappalli<option value=Tirunelveli>Tirunelveli<option value=Tiruppur>Tiruppur<option value=Tiruvallur>Tiruvallur<option value=Tiruvannamalai>Tiruvannamalai<option value=Vellore>Vellore<option value=Viluppuram>Viluppuram<option value=Virudhunagar>Virudhunagar</select></center></br><table class="table tableizer-table" id=Arakkonam><thead><tr class=tableizer-firstrow><th>S.No <th>Candidate Name <th>Political Party <th>Alliance<th>Symbol<th>Sex<th>Affidavit</thead> <tbody><tr><td>1<td>D PANDIYAN<td>Bahujan Samaj Party<td>-<td><img class="symbol" src="" onerror="this.style.display='none'"><td>M<td><a href="https://mega.nz/file/dbliwIjT#C4oXa_nTHnQRoUnVrmmm-48hr7s-K1z5QD37bcl5nIc" target=_blank>Download</a> 
 <tr><td>2<td>L VIJAYAN<td>All India Anna Dravida Munnetra Kazhagam<td>AIADMK+<td><img class="symbol" src="https://i.ibb.co/fNdwHYD/ADMK.png" onerror="this.style.display='none'"><td>M<td><a href="https://mega.nz/file/Vbtj1LBQ#ZGhLCCY7eJAVAQYrjGuwKfoic1sxTZTPRa7N_40qK1g" target=_blank>Download</a> 
 <tr><td>3<td>S JAGATHRATCHAKAN<td>Dravida Munnetra Kazhagam<td>INDIA<td><img class="symbol" src="https://i.ibb.co/JqGg76L/DMK.png" onerror="this.style.display='none'"><td>M<td><a href="https://mega.nz/file/ACEXwZBJ#Inp1x7UDuSKBqk7LMM9-aww_nO-9NZpTq3Zd_h7uu00" target=_blank>Download</a> 
@@ -1073,22 +1132,62 @@ $(document ).ready(function() {
 //countdown timer
 const electionDay = new Date("April 19, 2024 00:00:00");
 
-function updateCountdown() {
-  const now = new Date();
-  const distance = electionDay - now;
+const countDownClock = (number = 100, format = 'seconds') => {
 
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  const d = document;
+  const daysElement = d.querySelector('.days');
+  const hoursElement = d.querySelector('.hours');
+  const minutesElement = d.querySelector('.minutes');
+  const secondsElement = d.querySelector('.seconds');
+  let countdown;
+  convertFormat(format);
 
-  document.getElementById("days").innerHTML = days;
-  document.getElementById("hours").innerHTML = hours;
-  document.getElementById("minutes").innerHTML = minutes;
-  document.getElementById("seconds").innerHTML = seconds;
-}
 
-setInterval(updateCountdown, 1000);
+  function convertFormat(format) {
+    switch (format) {
+      case 'seconds':
+        return timer(number);
+      case 'minutes':
+        return timer(number * 60);
+      case 'hours':
+        return timer(number * 60 * 60);
+      case 'days':
+        return timer(number * 60 * 60 * 24);}
+
+  }
+
+  function timer(seconds) {
+    const now = Date.now();
+    const then = now + seconds * 1000;
+
+    countdown = setInterval(() => {
+      const secondsLeft = Math.round((then - Date.now()) / 1000);
+
+      if (secondsLeft <= 0) {
+        clearInterval(countdown);
+        return;
+      };
+
+      displayTimeLeft(secondsLeft);
+
+    }, 1000);
+  }
+
+  function displayTimeLeft(seconds) {
+    daysElement.textContent = Math.floor(seconds / 86400);
+    hoursElement.textContent = Math.floor(seconds % 86400 / 3600);
+    minutesElement.textContent = Math.floor(seconds % 86400 % 3600 / 60);
+    secondsElement.textContent = seconds % 60 < 10 ? `0${seconds % 60}` : seconds % 60;
+  }
+};
+
+
+/*
+  start countdown
+  enter number and format
+  days, hours, minutes or seconds
+*/
+countDownClock(12, 'days');
 </script> <div><a class=scrollToTop href=#top style="position: absolute; padding: 20px; right:0px; display: inline;"><img alt="Scroll Up" src=arrow-up.jpg style="width: 30px;height: 30px;"></a> <script>$("a[href='#top']").click(function() {
 $("html, body").animate({ scrollTop: 0 }, "slow");
 return false;
