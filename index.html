@@ -2386,73 +2386,133 @@ function toggleLanguage(language) {
 
 
 //countdown timer
+// const electionDay = new Date("April 19, 2024 00:00:00");
+// const now = new Date();
+// const timeDifference = electionDay - now;
+// const secondsLeft = Math.floor(timeDifference / 1000);
+// console.log(secondsLeft);
+// const countDownClock = (number = 100, format = 'seconds') => {
+//   const d = document;
+//   const daysElement = d.querySelector('.days');
+//   const hoursElement = d.querySelector('.hours');
+//   const minutesElement = d.querySelector('.minutes');
+//   const secondsElement = d.querySelector('.seconds');
+//   const tamildaysElement = d.querySelector('.tamildays');
+//   const tamilhoursElement = d.querySelector('.tamilhours');
+//   const tamilminutesElement = d.querySelector('.tamilminutes');
+//   const tamilsecondsElement = d.querySelector('.tamilseconds');
+//   let countdown;
+//   convertFormat(format);
+
+//   function convertFormat(format) {
+//     switch (format) {
+//       case 'seconds':
+//         return timer(number);
+//       case 'minutes':
+//         return timer(number * 60);
+//       case 'hours':
+//         return timer(number * 60 * 3600);
+//       case 'days':
+//         return timer(number * 24 * 60 * 60);
+//     }
+//   }
+
+//   function timer(seconds) {
+//     countdown = setInterval(() => {
+//       if (seconds <= 0) {
+//         clearInterval(countdown);
+//         return;
+//       }
+
+//       displayTimeLeft(seconds);
+//       seconds--;
+
+//     }, 1000);
+//   }
+
+//   function displayTimeLeft(seconds) {
+//     const days = Math.floor(seconds / 86400);
+//     const hours = Math.floor(seconds % 86400 / 3600);
+//     const minutes = Math.floor(seconds % 86400 % 3600 / 60);
+//     const secondsLeft = seconds % 60;
+
+//     daysElement.textContent = days < 10? `0${days}` : days;
+//     hoursElement.textContent = hours < 10? `0${hours}` : hours;
+//     minutesElement.textContent = minutes < 10? `0${minutes}` : minutes;
+//     secondsElement.textContent = secondsLeft < 10? `0${secondsLeft}` : secondsLeft;
+
+//     tamildaysElement.textContent = days < 10? `0${days}` : days;
+//     tamilhoursElement.textContent = hours < 10? `0${hours}` : hours;
+//     tamilminutesElement.textContent = minutes < 10? `0${minutes}` : minutes;
+//     tamilsecondsElement.textContent = secondsLeft < 10? `0${secondsLeft}` : secondsLeft;
+//   }
+
+//   countDownClock(12, 'days');
+// }
 const electionDay = new Date("April 19, 2024 00:00:00");
 
-const countDownClock = (number = 100, format = 'seconds') => {
+const countDownClock = (format = 'seconds') => {
+  const d = document;
+  const daysElement = d.querySelector('.days');
+  const hoursElement = d.querySelector('.hours');
+  const minutesElement = d.querySelector('.minutes');
+  const secondsElement = d.querySelector('.seconds');
+  const tamildaysElement = d.querySelector('.tamildays');
+  const tamilhoursElement = d.querySelector('.tamilhours');
+  const tamilminutesElement = d.querySelector('.tamilminutes');
+  const tamilsecondsElement = d.querySelector('.tamilseconds');
+  let countdown;
+  convertFormat(format);
 
-const d = document;
-const daysElement = d.querySelector('.days');
-const hoursElement = d.querySelector('.hours');
-const minutesElement = d.querySelector('.minutes');
-const secondsElement = d.querySelector('.seconds');
-const tamildaysElement = d.querySelector('.tamildays');
-const tamilhoursElement = d.querySelector('.tamilhours');
-const tamilminutesElement = d.querySelector('.tamilminutes');
-const tamilsecondsElement = d.querySelector('.tamilseconds');
-let countdown;
-convertFormat(format);
-
-
-function convertFormat(format) {
-switch (format) {
-  case 'seconds':
-    return timer(number);
-  case 'minutes':
-    return timer(number * 60);
-  case 'hours':
-    return timer(number * 60 * 60);
-  case 'days':
-    return timer(number * 60 * 60 * 24);}
-
-}
+  function convertFormat(format) {
+    switch (format) {
+      case 'seconds':
+        return timer(1);
+      case 'minutes':
+        return timer(60);
+      case 'hours':
+        return timer(60 * 60);
+      case 'days':
+        return timer(60 * 60 * 24);
+    }
+  }
 
 function timer(seconds) {
-const now = Date.now();
-const then = now + seconds * 1000;
+  let now = Date.now();
+  const then = electionDay.getTime();
 
-countdown = setInterval(() => {
-  const secondsLeft = Math.round((then - Date.now()) / 1000);
+  countdown = setInterval(() => {
+    const secondsLeft = Math.round((then - now) / 1000);
 
-  if (secondsLeft <= 0) {
-    clearInterval(countdown);
-    return;
-  };
+    if (secondsLeft <= 0) {
+      clearInterval(countdown);
+      return;
+    };
 
-  displayTimeLeft(secondsLeft);
-
-}, 1000);
+    displayTimeLeft(secondsLeft);
+    now = Date.now();
+  }, 1000);
 }
 
-function displayTimeLeft(seconds) {
-daysElement.textContent = Math.floor(seconds / 86400);
-hoursElement.textContent = Math.floor(seconds % 86400 / 3600);
-minutesElement.textContent = Math.floor(seconds % 86400 % 3600 / 60);
-secondsElement.textContent = seconds % 60 < 10 ? `0${seconds % 60}` : seconds % 60;
+  function displayTimeLeft(seconds) {
+    const days = Math.floor(seconds / 86400);
+    const hours = Math.floor(seconds % 86400 / 3600);
+    const minutes = Math.floor(seconds % 86400 % 3600 / 60);
+    const secondsLeft = seconds % 60;
 
-tamildaysElement.textContent = Math.floor(seconds / 86400);
-tamilhoursElement.textContent = Math.floor(seconds % 86400 / 3600);
-tamilminutesElement.textContent = Math.floor(seconds % 86400 % 3600 / 60);
-tamilsecondsElement.textContent = seconds % 60 < 10 ? `0${seconds % 60}` : seconds % 60;
-}
+    daysElement.textContent = days < 10? `0${days}` : days;
+    hoursElement.textContent = hours < 10? `0${hours}` : hours;
+    minutesElement.textContent = minutes < 10? `0${minutes}` : minutes;
+    secondsElement.textContent = secondsLeft < 10? `0${secondsLeft}` : secondsLeft;
+
+    tamildaysElement.textContent = days < 10? `0${days}` : days;
+    tamilhoursElement.textContent = hours < 10? `0${hours}` : hours;
+    tamilminutesElement.textContent = minutes < 10? `0${minutes}` : minutes;
+    tamilsecondsElement.textContent = secondsLeft < 10? `0${secondsLeft}` : secondsLeft;
+  }
 };
 
-
-/*
-start countdown
-enter number and format
-days, hours, minutes or seconds
-*/
-countDownClock(12, 'days');
+countDownClock('days');
 </script> <div><a class=scrollToTop href=#top style="position: absolute; padding: 20px; right:0px; display: inline;"><img alt="Scroll Up" src=arrow-up.jpg style="width: 30px;height: 30px;"></a> <script>$("a[href='#top']").click(function() {
 $("html, body").animate({ scrollTop: 0 }, "slow");
 return false;
