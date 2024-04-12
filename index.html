@@ -31,13 +31,6 @@ img.symbol {
   width: 100px;
   height: 100px;
 }
-<!-- #zone {
-  background-color: rgb(0, 74, 173);
-  border-color: rgb(0, 74, 173);
-  color: white; 
-  margin-bottom: 0px;
-  text-align: center;
-} -->
 .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
   padding: 5px;
 }.button {
@@ -72,7 +65,11 @@ justify-content: space-between;
 .days-container,
 .hours-container,
 .minutes-container, 
-.seconds-container {
+.seconds-container,
+.days-container-tamil,
+.hours-container-tamil,
+.minutes-container-tamil, 
+.seconds-container-tamil {
 display:ruby;
 flex-direction:column;
 align-items: center;
@@ -145,13 +142,21 @@ color : #337ab7;
     width: 40;
     height: 20%;
   }
+  .days-container-tamil,
+  .hours-container-tamil,
+  .minutes-container-tamil, 
+  .seconds-container-tamil {
+    font-size: 4px;
+    width: 40;
+    height: 20%;
+  }
   img.symbol {
       width: 30px;
       height: 30px;
     }
-  }
+}
   
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   #election-heading {
   font-size :1.5rem;
   }
@@ -167,8 +172,16 @@ color : #337ab7;
     width: 20%;
     height: 20%;
   }
+  .days-container-tamil,
+  .hours-container-tamil,
+  .minutes-container-tamil, 
+  .seconds-container-tamil {
+    font-size: 7.5px;
+    width: 20%;
+    height: 20%;
   }
-  @media only screen and (min-width: 992px) {
+}
+@media only screen and (min-width: 992px) {
   #election-heading {
     font-size :2rem;
   }
@@ -180,73 +193,19 @@ color : #337ab7;
   .hours-container,
   .minutes-container, 
   .seconds-container {
-    /* font-size: 0.5em;
-    width: 100px;
-    height: 100px; */
     font-size: 12px;
     width: 75px;
     height: 90px;
   }
+  .days-container-tamil,
+  .hours-container-tamil,
+  .minutes-container-tamil, 
+  .seconds-container-tamil {
+    font-size: 11px;
+    width: 75px;
+    height: 90px;
   }
-  /*
-@media only screen and (max-width: 200px) {
-table.tableizer-table {
-font-size: 6px;
 }
-#election-heading {
-font-size :0.5rem;
-}
-.countdown-container {
-max-width: 10%;
-}
-
-.days-container,
-.hours-container,
-.minutes-container, 
-.seconds-container {
-font-size: 0.5em;
-width: 10%;
-height: 20%;
-}
-img.symbol {
-  width: 30px;
-  height: 30px;
-}
-}
-
-@media screen and (min-width: 100px) {
-#election-heading {
-font-size :0.5rem;
-}
-.countdown-container {
-max-width: 30%;
-}
-
-.days-container,
-.hours-container,
-.minutes-container, 
-.seconds-container {
-font-size: 3px;
-width: 20%;
-height: 20%;
-}
-}
-@media only screen and (min-width: 100px) {#election-heading {
-font-size :1rem;
-}
-.countdown-container {
-max-width: 30%;
-}*/
-
-/*.days-container,
-.hours-container,
-.minutes-container, 
-.seconds-container {
-font-size: 0.5em;
-width: 100px;
-height: 100px;
-}*/
-
 
 @media only screen and (max-width: 480px) {
 .tableizer-table {
@@ -1239,8 +1198,8 @@ height: 100px;
           <tr><td>26<td>VEDHA DHAMODHARAN<td>Independent<td>-<td id="symbol-td"><img  class="symbol" src="" onerror="this.style.display='none'"><td>M<td><a href="https://mega.nz/file/BWtEVYwA#wUEv1MTMen-TdjLfLt-f6Ct27GTAB6pYjTnTb1oJ1RA" target=_blank>Download</a> 
           <tr><td>27<td>JEYARAJ T<td>Independent<td>-<td id="symbol-td"><img  class="symbol" src="" onerror="this.style.display='none'"><td>M<td><a href="https://mega.nz/file/hadQHZTA#8hcMm3e_ld9PBG3y1Hf58rWFG7CPkvEECmo-O068Jyc" target=_blank>Download</a> </tbody></table>
           <hr> <div><input class="lead mb-3 text-center" onclick="window.open('https://newsofchennai.github.io/tnelection2024/manifesto','_blank')" style="align:center;font-size:12px;font-family: Arial, Helvetica, sans-serif;" type=button value="Political Party Manifestos" target="_blank"> <input class="lead mb-3 text-center" onclick="window.open('https://electoralsearch.eci.gov.in/pollingstation','_blank')" style="align:center;font-size:12px;font-family: Arial, Helvetica, sans-serif;" type=button value="Locate your polling station"> <input class="lead mb-3 text-center" onclick="window.open('https://electoralsearch.eci.gov.in/','_blank')" style="align:center;font-size:12px;font-family: Arial, Helvetica, sans-serif;" type=button value="Know your Voter ID Number"> <input class="lead mb-3 text-center" onclick="window.open('https://voters.eci.gov.in/signup','_blank')" style="align:center;font-size:12px;font-family: Arial, Helvetica, sans-serif;" type=button value="Download e-Voter ID Card"> <input class="lead mb-3 text-center" onclick="window.open('https://i.ibb.co/PhPrtLw/How-to-vote.jpg','_blank')" style="align:center;font-size:12px;font-family: Arial, Helvetica, sans-serif;" type=button value="How to vote (VVPAT)">  <p class="lead mb-3 text-center" style="align:center;font-size:14px;font-family: Arial, Helvetica, sans-serif;" value=""><a href=tel:1950><img src=phone.png style="width: 25px;height: 25px;">Call EC for queries & complaints</a></div> <hr>            
-              <div class=container><center><div id="election-heading"><strong>ELECTION DATE - 19<sup>th</sup> APRIL 2024 </strong></div> <br><section class="countdown-container">
-          
+              <div class=container><center><div id="election-heading"><strong>ELECTION DATE - 19<sup>th</sup> APRIL 2024 </strong></div> <br>
+                <section class="countdown-container" id="message-container">          
                   <div class="days-container">
                     <div class="days"></div>
                     <div class="days-label">days</div>
@@ -2303,29 +2262,24 @@ height: 100px;
               <tr><td>26<td>வேதா @ தாமோதரன்<td>சுயேச்சை<td>-<td><img class="symbol" src="" onerror="this.style.display='none'"><td>ஆண்<td><a href="https://mega.nz/file/BWtEVYwA#wUEv1MTMen-TdjLfLt-f6Ct27GTAB6pYjTnTb1oJ1RA" target=_blank>Download</a> 
               <tr><td>27<td>ஜெயராஜ் டி<td>சுயேச்சை<td>-<td><img class="symbol" src="" onerror="this.style.display='none'"><td>ஆண்<td><a href="https://mega.nz/file/hadQHZTA#8hcMm3e_ld9PBG3y1Hf58rWFG7CPkvEECmo-O068Jyc" target=_blank>Download</a> </tbody></table>
                   <hr> <div><input class="lead mb-3 text-center" onclick="window.open('https://newsofchennai.github.io/tnelection2024/manifesto','_blank')" style="align:center;font-size:12px;font-family: Arial, Helvetica, sans-serif;" type=button value="அரசியல் கட்சி அறிக்கைகள்" target="_blank"> <input class="lead mb-3 text-center" onclick="location.href='https://electoralsearch.eci.gov.in/pollingstation'" style="align:center;font-size:12px;font-family: Arial, Helvetica, sans-serif;" type=button value="உங்கள் வாக்குச்சாவடியை கண்டறிய"> <input class="lead mb-3 text-center" onclick="location.href='https://electoralsearch.eci.gov.in/'" style="align:center;font-size:12px;font-family: Arial, Helvetica, sans-serif;" type=button value="உங்கள் வாக்காளர் அடையாள எண்" > <input class="lead mb-3 text-center" onclick="location.href='https://voters.eci.gov.in/signup'" style="align:center;font-size:12px;font-family: Arial, Helvetica, sans-serif;" type=button value="வாக்காளர் அடையாள அட்டையை பதிவிறக்கம்"> <input class="lead mb-3 text-center" onclick="location.href='https://i.ibb.co/PhPrtLw/How-to-vote.jpg'" style="align:center;font-size:12px;font-family: Arial, Helvetica, sans-serif;" type=button value="எப்படி வாக்களிப்பது">  <p class="lead mb-3 text-center" style="align:center;font-size:14px;font-family: Arial, Helvetica, sans-serif;" value=""><a href=tel:1950 target=_blank><img src=phone.png style="width: 25px;height: 25px;">கேள்விகள் மற்றும் புகார்களுக்கு</a></div> <hr><div align="center"><div id="election-heading"><strong>தேர்தல் தேதி - 19<sup>th</sup> ஏப்ரல் 2024 </strong></div> <br>
-                      <section class="countdown-container">
-                  
-                          <div class="days-container">
+                      <section class="countdown-container" id="message-container-tamil">                  
+                          <div class="days-container-tamil">
                             <div class="tamildays"></div>
                             <div class="days-label">நாட்கள்</div>
-                          </div>
-                          
-                          <div class="hours-container">
+                          </div>                          
+                          <div class="hours-container-tamil">
                             <div class="tamilhours"></div>
                             <div class="hours-label">மணி</div>
-                          </div>
-                          
-                          <div class="minutes-container">
+                          </div>                          
+                          <div class="minutes-container-tamil">
                             <div class="tamilminutes"></div>
                             <div class="minutes-label">நிமிடங்கள்</div>
-                          </div>
-                          
-                          <div class="seconds-container">
+                          </div>                          
+                          <div class="seconds-container-tamil">
                             <div class="tamilseconds"></div>
                             <div class="seconds-label">வினாடிகள்</div>
                           </div>
-                          
-                          </section><br><br>
+                        </section><br><br>
                          <p class="lead mb-4 mt-20" style="font-size:12px;font-family: Arial, Helvetica, sans-serif;"> இந்த சிறிய இணையதளம் News of Chennai ஆல் உருவாக்கப்பட்டது. சரிபார்க்கப்பட்ட நம்பகத்தனமான செய்திகளுக்கு <a href=https://www.instagram.com/newsofchennai/>Instagram </a> & <a href=https://twitter.com/newsofchennai> Twitter</a> இல் பின்தொடரவும். <p class="lead mb-4 mt-20" style="font-size:10px;font-family: Arial, Helvetica, sans-serif;"> அனைத்து தகவல்களும் <a href=https://www.eci.gov.in/>EC இணையதளத்தில்</a> இருந்து பெறப்பட்டது. | வாக்களிப்பது குடிமகனின் கடமை. <br> அணி: <a href="https://www.linkedin.com/in/keerthana-senthilkumar-4a1a8b194/">கீர்த்தனா செந்தில்குமார்</a>, <a href="https://www.linkedin.com/in/mohamed-abu-thahir/">முகமது அபு தாஹிர்</a>, <a href="https://www.linkedin.com/in/sanjeevnivedan/">சஞ்சீவ் நிவேதன்</a> & ஷியாம் சுந்தர். </br>உருவாக்கம் : <a href="https://www.linkedin.com/in/jayalakshmi-krishnan-ab8ba2113/">ஜெயலட்சுமி கிருஷ்ணன்</a>, அர்ச்சனா அசோக் <!--| தொடர்புக்கு @newsofchennai.--></div></center></div> 
 </body>
 <script type=text/javascript>function downloadPDF(){
@@ -2383,74 +2337,21 @@ function toggleLanguage(language) {
 });
   }
 }
-
-
-//countdown timer
-// const electionDay = new Date("April 19, 2024 00:00:00");
-// const now = new Date();
-// const timeDifference = electionDay - now;
-// const secondsLeft = Math.floor(timeDifference / 1000);
-// console.log(secondsLeft);
-// const countDownClock = (number = 100, format = 'seconds') => {
-//   const d = document;
-//   const daysElement = d.querySelector('.days');
-//   const hoursElement = d.querySelector('.hours');
-//   const minutesElement = d.querySelector('.minutes');
-//   const secondsElement = d.querySelector('.seconds');
-//   const tamildaysElement = d.querySelector('.tamildays');
-//   const tamilhoursElement = d.querySelector('.tamilhours');
-//   const tamilminutesElement = d.querySelector('.tamilminutes');
-//   const tamilsecondsElement = d.querySelector('.tamilseconds');
-//   let countdown;
-//   convertFormat(format);
-
-//   function convertFormat(format) {
-//     switch (format) {
-//       case 'seconds':
-//         return timer(number);
-//       case 'minutes':
-//         return timer(number * 60);
-//       case 'hours':
-//         return timer(number * 60 * 3600);
-//       case 'days':
-//         return timer(number * 24 * 60 * 60);
-//     }
-//   }
-
-//   function timer(seconds) {
-//     countdown = setInterval(() => {
-//       if (seconds <= 0) {
-//         clearInterval(countdown);
-//         return;
-//       }
-
-//       displayTimeLeft(seconds);
-//       seconds--;
-
-//     }, 1000);
-//   }
-
-//   function displayTimeLeft(seconds) {
-//     const days = Math.floor(seconds / 86400);
-//     const hours = Math.floor(seconds % 86400 / 3600);
-//     const minutes = Math.floor(seconds % 86400 % 3600 / 60);
-//     const secondsLeft = seconds % 60;
-
-//     daysElement.textContent = days < 10? `0${days}` : days;
-//     hoursElement.textContent = hours < 10? `0${hours}` : hours;
-//     minutesElement.textContent = minutes < 10? `0${minutes}` : minutes;
-//     secondsElement.textContent = secondsLeft < 10? `0${secondsLeft}` : secondsLeft;
-
-//     tamildaysElement.textContent = days < 10? `0${days}` : days;
-//     tamilhoursElement.textContent = hours < 10? `0${hours}` : hours;
-//     tamilminutesElement.textContent = minutes < 10? `0${minutes}` : minutes;
-//     tamilsecondsElement.textContent = secondsLeft < 10? `0${secondsLeft}` : secondsLeft;
-//   }
-
-//   countDownClock(12, 'days');
-// }
 const electionDay = new Date("April 19, 2024 00:00:00");
+const today = new Date();
+const dayAfterElection = new Date(electionDay.getTime() + 24 * 60 * 60 * 1000);
 
+if (today >= electionDay && today < dayAfterElection) {
+  document.getElementById('message-container').innerHTML = `
+    <strong><div id="election-heading" style="color: crimson;">ELECTION DAY, CAST YOUR VOTE!</div></strong>`;
+  document.getElementById('message-container-tamil').innerHTML = `
+    <strong><div id="election-heading" style="color: crimson;">தேர்தல் நாள், உங்கள் வாக்கைப் பதிவு செய்யுங்கள்!</div></strong>`;
+} else if (today >= dayAfterElection) {
+  document.getElementById('message-container').innerHTML = `
+    <strong><div id="election-heading" style="color: crimson;">THANK YOU FOR CASTING YOUR VOTING!</div></strong>`;
+  document.getElementById('message-container-tamil').innerHTML = `
+    <strong><div id="election-heading" style="color: crimson;">உங்கள் வாக்களித்தமைக்கு நன்றி!</div></strong>`;
+} else {
 const countDownClock = (format = 'seconds') => {
   const d = document;
   const daysElement = d.querySelector('.days');
@@ -2513,6 +2414,7 @@ function timer(seconds) {
 };
 
 countDownClock('days');
+}
 </script> <div><a class=scrollToTop href=#top style="position: absolute; padding: 20px; right:0px; display: inline;"><img alt="Scroll Up" src=arrow-up.jpg style="width: 30px;height: 30px;"></a> <script>$("a[href='#top']").click(function() {
 $("html, body").animate({ scrollTop: 0 }, "slow");
 return false;
